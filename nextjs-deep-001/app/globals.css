@@ -164,13 +164,13 @@ ul {
   margin: 0;
 }
 
-#archive-header ul {
+.archive-header ul {
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
 }
 
-#archive-header ul a {
+.archive-header ul a {
   text-decoration: none;
   color: #b0b0a6;
   border-radius: 4px;
@@ -178,8 +178,8 @@ ul {
   font-size: 1.25rem;
 }
 
-#archive-header ul a:hover,
-#archive-header ul a.active {
+.archive-header ul a:hover,
+.archive-header ul a.active {
   color: #e5e5e1;
 }
 

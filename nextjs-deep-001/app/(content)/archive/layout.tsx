@@ -1,11 +1,11 @@
 import React from "react";
 
 interface ArchieveLayout {
-  archieve: React.ReactNode;
+  archive: React.ReactNode;
   latest: React.ReactNode;
 }
 
-function ArchieveLayout({
+async function ArchieveLayout({
   archive,
   latest,
 }: ArchieveLayout & LayoutProps<"/archive">) {

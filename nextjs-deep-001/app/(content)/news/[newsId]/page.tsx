@@ -1,6 +1,8 @@
-import { DUMMY_NEWS } from "@/dummy-news";
+import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+
+import { DUMMY_NEWS } from "@/dummy-news";
 
 interface News {
   id: string;
@@ -25,12 +27,14 @@ async function NewsPageDetails({ params }: PageProps<"/news/[newsId]">) {
       {newsDetail && (
         <article className="news-article">
           <header>
-            <Image
-              src={`/images/news/${newsDetail.image}`}
-              alt={newsDetail.title}
-              width={112}
-              height={112}
-            />
+            <Link href={`/news/${newsId}/image`}>
+              <Image
+                src={`/images/news/${newsDetail.image}`}
+                alt={newsDetail.title}
+                width={112}
+                height={112}
+              />
+            </Link>
             <h1>{newsDetail?.title}</h1>
             <time dateTime={newsDetail.date}>{newsDetail.date}</time>
           </header>
